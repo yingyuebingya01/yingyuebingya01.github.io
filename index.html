@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>宗林欣的转折：从游戏到信息技术的启蒙之旅</title>
+<style>
+  body {
+    font-family: '仿宋', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    text-align: center;
+  }
+  
+  .wrapper {
+    background: url("4.jpg");/*背景*/
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  h1 {
+    color: #333;
+  }
+
+  .scene {
+    display: none;
+  }
+
+  .scene.active {
+    display: block;
+    animation: fadeIn 1s;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .scene img {
+    max-width: 100%;
+    height: auto;
+    width: 500px;
+    border-radius: 4px;
+    transition:all 1s;
+  }
+  .scene p{
+    text-align: left;
+    font-size: 20px;
+  }
+  .scene img:hover{
+    transform:scale(1.5)rotate(10deg) }
+  button {
+    background: #5c84f1;
+    color: white;
+    padding: 10px 20px;
+    margin: 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: opacity 0.3s;
+  }
+
+  button:hover {
+    opacity: 0.9;
+  }
+</style>
+</head>
+<body>
+<audio autoplay="autoplay" 
+controls="controls"
+loop="loop">
+<source type="audio/mpeg" 
+src="歌.mp3"></source>
+</audio>
+
+<div class="wrapper">
+  <h1>宗林欣的转折</h1>
+  <div class="scene active" id="scene-1">
+    <p>宗林欣坐在昏暗的房间里，眼睛紧盯着电脑屏幕。他的手指快速地敲击着键盘，控制着角色在虚拟世界中战斗。周围散落着空饮料瓶和零食袋，他完全沉浸在游戏的世界里。</p>
+    <div>
+      <img src="玩游戏.png"/>
+    </div>
+    <button onclick="switchScene(2)">遇见季虬</button>
+  </div>
+
+  <div class="scene" id="scene-2">
+    <p>宗林欣在游戏群里遇见了季虬，他们一起玩，也聊得来，是游戏中的最好玩伴，在互相的配合下，他们战无不胜</p>
+    <div>
+      <img src="光遇同伴.jpg"/>
+    </div>
+    <button onclick="switchScene(3)">季虬的邀请</button>
+  </div>
+
+  <div class="scene" id="scene-3">
+    <p>在他们的城市里，他们共同玩的游戏举办了一个活动，季虬邀请宗林欣参加游戏线下活动，。</p>
+    <div>
+      <img src="线下活动.png"/>
+    </div>
+    <button onclick="switchScene(4)">参观信息科技公司</button>
+  </div>
+
+   <div class="scene" id="scene-4">
+    <p>活动结束后，季虬带领宗林欣参观他自己的信息技术公司，宗林欣开始对信息技术产生了兴趣。</p>
+    <div>
+      <img src="参观.png"/>
+    </div>
+    <button onclick="switchScene(5)">尝试</button>
+  </div>
+
+ <div class="scene" id="scene-5">
+    <p>宗林欣接触信息技术之后，发现了信息技术的有趣之处。</p>
+    <div>
+      <img src="信息技术.png"/>
+    </div>
+    <button onclick="switchScene(6)">学习</button>
+  </div>
+
+ <div class="scene" id="scene-6">
+    <p>宗林欣开始对信息技术深入学习。</p>
+     <div>
+      <img src="8.png"/>
+    </div>
+    <button onclick="switchScene(7)">提高自身的信息素养</button>
+  </div>
+
+ <div class="scene" id="scene-7">
+    <p>在一次学校信息比赛中，宗林欣发挥出了最好的水平。</p>
+     <div>
+      <img src="获奖.png"/>
+    </div>
+    <button onclick="switchScene(8)">着手培养</button>
+  </div>
+ <div class="scene" id="scene-8">
+    <p>季虬发觉了宗林欣的天赋，觉得他是一个不可多得的天才，开始培养宗林欣。</p>
+    <div>
+      <img src="培养.png"/>
+    </div>
+    <button onclick="switchScene(9)">奋发图强</button>
+  </div>
+
+  <div class="scene" id="scene-9">
+    <p>宗林欣以自身最大的努力去学习信息技术</p>
+    <div>
+      <img src="技术2.png"/>
+    </div>
+    <button onclick="switchScene(10)">第一次的成功</button>
+  </div>
+
+  <div class="scene" id="scene-10">
+    <p>最后宗林欣成为了计算机系的新星</p>
+    <div>
+      <img src="成为.png"/>
+    </div>
+    <button onclick="switchScene(11)">功成名就</button>
+  </div>
+
+  <div class="scene" id="scene-11">
+    <p>宗林欣自愿去社区教学，让跟多人了解和熟悉信息技术</p>
+    <div>
+      <img src="教学.png"/>
+    </div>
+    <button onclick="switchScene(1)">重新开始</button>
+  </div>
+</div>
+
+<script>
+  function switchScene(sceneNumber) {
+    const scenes = document.querySelectorAll('.scene');
+    scenes.forEach(scene => {
+      scene.classList.remove('active');
+    });
+    const nextScene = document.getElementById('scene-' + sceneNumber);
+    nextScene.classList.add('active');
+  }
+</script>
+
+</body>
+</html>
